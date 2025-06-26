@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextGen 🎬 - Movie Streaming Platform
 
-## Getting Started
+NextGen is a modern and visually engaging movie streaming platform designed to deliver a cinematic experience through a powerful, performant, and scalable tech stack.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js**: App Router-based file structure for fast, SEO-friendly, full-stack development.
+- **TypeScript**: Type-safe development experience.
+- **Tailwind CSS**: Utility-first CSS framework for consistent and responsive design.
+- **shadcn/ui**: Beautiful and accessible components built with Radix and Tailwind.
+- **Framer Motion**: Smooth and rich animation handling.
+- **React Hook Form**: Lightweight form library for managing complex forms effortlessly.
+
+## 📁 Project Structure Overview
+
+```
+app/
+├─ _components/              # Reusable UI components
+│  ├─ auth/                  # Auth-related UI components
+│  └─ Home/                  # Home page animations and inputs
+│     ├─ AppearingAnimation.tsx
+│     └─ InputField.tsx
+│
+├─ (auth)/                   # App route groups (parallel route handling)
+│  ├─ forgot-password/
+│  ├─ reset-password/
+│  ├─ signin/
+│  ├─ signup/
+│  └─ layout.tsx            # Layout for all auth routes
+│
+├─ api/auth/[...nextauth]/   # NextAuth API route handler
+│
+├─ layout.tsx                # Root layout for the app
+├─ page.tsx                  # Home page of the app
+├─ globals.css               # Global styles
+└─ favicon.ico
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features (In Progress / Planned)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- User Authentication via **NextAuth.js**
+- Fully animated UI for seamless user experience
+- Reusable, accessible input components and animations
+- Sign-in / Sign-up with password reset flows
+- Movie list, search, filter, and streaming page (coming soon)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Setup Instructions
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/your-username/nextgen-movie-platform.git
+   cd nextgen-movie-platform
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Run the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## 🔐 Authentication Setup
+
+This project uses **NextAuth.js** for secure authentication.
+Ensure you add environment variables for providers (like GitHub, Google, or Credentials) in a `.env.local` file.
+
+```
+NEXTAUTH_SECRET=your_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+
+## 🧠 Author
+
+**Gokul Krishnan**
+A full-stack developer passionate about building immersive UIs and scalable web apps.
+
+---
+
+> Feel free to contribute, star the project ⭐, and follow for updates!
