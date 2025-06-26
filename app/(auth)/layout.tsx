@@ -1,4 +1,6 @@
-function layout({ children }: { children: JSX.Element }) {
+import React from "react";
+
+function layout({ children }: { children: React.ReactNode }) {
   return (
     <div
       className="h-screen bg-no-repeat bg-cover flex items-center justify-center"
